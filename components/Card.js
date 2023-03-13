@@ -1,6 +1,9 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-export default function Card({ navigation, item }) {
+
+export default function Card({ item }) {
+    const navigation = useNavigation();
     return (
         <TouchableOpacity onPress={() => navigation.navigate('Info', item={item})}>
             <View style={styles.card}>
